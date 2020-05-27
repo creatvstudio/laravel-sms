@@ -1,4 +1,4 @@
-# A Laravel package for send SMS with multiple driver.
+# A Laravel package for sending SMS with multiple driver.
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/creatvstudio/laravel-sms.svg?style=flat-square)](https://packagist.org/packages/creatvstudio/laravel-sms)
 [![Total Downloads](https://img.shields.io/packagist/dt/creatvstudio/laravel-sms.svg?style=flat-square)](https://packagist.org/packages/creatvstudio/laravel-sms)
