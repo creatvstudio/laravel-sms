@@ -1,24 +1,26 @@
-# Very short description of the package
+# A Laravel package for send SMS with multiple driver.
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/creatvstudio/sms.svg?style=flat-square)](https://packagist.org/packages/creatvstudio/sms)
-[![Build Status](https://img.shields.io/travis/creatvstudio/sms/master.svg?style=flat-square)](https://travis-ci.org/creatvstudio/sms)
-[![Quality Score](https://img.shields.io/scrutinizer/g/creatvstudio/sms.svg?style=flat-square)](https://scrutinizer-ci.com/g/creatvstudio/sms)
-[![Total Downloads](https://img.shields.io/packagist/dt/creatvstudio/sms.svg?style=flat-square)](https://packagist.org/packages/creatvstudio/sms)
-
-This is where your description should go. Try and limit it to a paragraph or two, and maybe throw in a mention of what PSRs you support to avoid any confusion with users and contributors.
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/creatvstudio/laravel-sms.svg?style=flat-square)](https://packagist.org/packages/creatvstudio/laravel-sms)
+[![Total Downloads](https://img.shields.io/packagist/dt/creatvstudio/laravel-sms.svg?style=flat-square)](https://packagist.org/packages/creatvstudio/laravel-sms)
 
 ## Installation
 
 You can install the package via composer:
 
 ```bash
-composer require creatvstudio/sms
+composer require creatvstudio/laravel-sms
 ```
 
 ## Usage
 
 ``` php
-// Usage description here
+SMS::send('+6344444444', 'Your sms message.');
+```
+
+## Using Log driver
+
+``` php
+SMS::driver('log')->send('+6344444444', 'Your sms message.');
 ```
 
 ### Testing
@@ -41,7 +43,7 @@ If you discover any security related issues, please email jeff@creatvstudio.ph i
 
 ## Credits
 
-- [Jeffrey Naval](https://github.com/creatvstudio)
+- [Jeffrey Naval](https://github.com/jeffreynaval)
 - [All Contributors](../../contributors)
 
 ## License
