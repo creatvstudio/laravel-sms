@@ -3,9 +3,9 @@
 namespace CreatvStudio\Sms;
 
 use CreatvStudio\Itexmo\Itexmo;
-use Illuminate\Support\Manager;
-use CreatvStudio\Sms\LogSmsSender;
 use CreatvStudio\Sms\ItexmoSmsSender;
+use CreatvStudio\Sms\LogSmsSender;
+use Illuminate\Support\Manager;
 
 class SmsManager extends Manager
 {
@@ -16,7 +16,7 @@ class SmsManager extends Manager
      */
     public function getDefaultDriver()
     {
-        return $this->app['config']['sms.driver'];
+        return $this->container['config']['sms.driver'];
     }
 
     /**
@@ -26,7 +26,8 @@ class SmsManager extends Manager
      */
     public function createItexmoDriver()
     {
-        $itexmo = $this->app['itexmo'];
+        $itexmo = $this->container['itexmo'];
+
         return new ItexmoSmsSender($itexmo);
     }
 
@@ -37,7 +38,7 @@ class SmsManager extends Manager
      */
     public function createLogDriver()
     {
-        return new LogSmsSender($this->app['log']);
+        return new LogSmsSender($this->container['log']);
     }
 
     /**
@@ -47,6 +48,5 @@ class SmsManager extends Manager
      */
     public function createNexmoDriver()
     {
-        //
     }
 }
